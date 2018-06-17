@@ -14,9 +14,34 @@ public class PageController {
 	public ModelAndView index() {
 		
 		ModelAndView mv = new ModelAndView("page"); //page would be the master page
-		mv.addObject("greeting","Welcome to Spring MVC");
+//		mv.addObject("greeting","Welcome to Spring MVC");
+		mv.addObject("title","Home");
+		mv.addObject("userClickHome",true);
 		return mv;
 	}
+	
+@RequestMapping(value = "/about") //Mapping page.jsp with /,home and index
+	
+	public ModelAndView about() {
+		
+		ModelAndView mv = new ModelAndView("page"); //page would be the master page
+//		mv.addObject("greeting","Welcome to Spring MVC");
+		mv.addObject("title","About Us");
+		mv.addObject("userClickAbout",true);
+		return mv;
+	}
+	
+@RequestMapping(value = "/contact") //Mapping page.jsp with /,home and index
+
+public ModelAndView contact() {
+	
+	ModelAndView mv = new ModelAndView("page"); //page would be the master page
+//	mv.addObject("greeting","Welcome to Spring MVC");
+	mv.addObject("title","Contact Us");
+	mv.addObject("userClickContact",true);
+	return mv;
+}
+	
 	
 /*@RequestMapping(value="/test") //Mapping page.jsp with test using ANNOTATIONS
 	
@@ -29,7 +54,7 @@ public class PageController {
 		return mv;
 	}*/
 
-@RequestMapping(value="/test/{greeting}") //Mapping page.jsp with test using ANNOTATIONS
+/*@RequestMapping(value="/test/{greeting}") //Mapping page.jsp with test using ANNOTATIONS
                                           //this greeting would be DYNAMIC and would be 
 										  //stored in string variable(greeting) 
 
@@ -41,5 +66,5 @@ public ModelAndView test(@PathVariable("greeting")String greeting) { //here it i
 	mv.addObject("greeting",greeting);
 	return mv;
 }
-	
+	*/
 }

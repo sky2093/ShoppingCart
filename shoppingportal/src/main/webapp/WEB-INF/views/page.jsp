@@ -72,7 +72,11 @@
 	<!-- Page Content -->
 	
 	<div class="content">
+	
+	
+	
 	<!-- Loading the HOME content -->
+	
 	<!-- This content should be loaded only when user prompts to this page i.e. HOME -->
 	<!-- Hence,this userClickHome will get from Controller -->
 	<c:if test="${userClickHome == true }"> 
@@ -88,6 +92,11 @@
 	<!-- Loads only when user clicks contact -->
 	<c:if test="${userClickContact == true }"> 
 	<%@include file="contact.jsp" %>
+	</c:if>
+	
+	<!-- Loads only when user clicks all products or category -->
+	<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }"> 
+	<%@include file="listProducts.jsp" %>
 	</c:if>
 	
 	</div>

@@ -15,6 +15,16 @@
 	</properties>
 
 	<dependencies>
+	
+	
+      <!-- Linking with backend project -->
+      
+      <dependency>
+      <groupId>net.sky</groupId>
+		<artifactId>shoppingbackend</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 
 
 		<!-- JAVA EE API -->
@@ -40,7 +50,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
+
 		<!-- JSTL DEPENDENCY -->
 		<dependency>
 			<groupId>jstl</groupId>
